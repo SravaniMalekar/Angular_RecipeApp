@@ -1,0 +1,214 @@
+ form{
+    background-color: whitesmoke;
+    color: black;
+    padding: 20px 25px;
+    box-sizing: border-box; 
+    flex: 1;
+    height: 500px;
+    width: 250px;
+    margin: auto;
+    margin-right: 50px;
+    border-radius: 10px;
+    /* position: absolute;
+    top: 20%;
+    right: 100px; */
+
+} 
+
+button{
+    width: 100%;
+    padding: 8px 5px;
+    margin-top: 20px;
+}
+a{
+    text-decoration: none;
+}
+
+.form-group{
+    padding: 5px;
+}
+ 
+.main{
+    height: 90vh;
+    width: 80vw;
+    display: flex;
+}
+
+.head{
+    flex:2;
+}
+.images a{
+
+    /* position: fixed;
+    top:0;
+    left:0; */
+    width: 140px;
+    height: 140px;
+    transition-property: transform;
+    transition-duration: 1s;
+    position: absolute;
+    cursor: default;
+    opacity: 0.5;
+    /* background-color: rgba(0,0,0,0.7); */
+    background-image: url('https://image.freepik.com/free-vector/doodle-food-icons_1133-409.jpg'); 
+}
+
+.one{
+    
+    bottom: 10%;
+    right: 10%;
+    
+    background-position: 0px 0px;
+
+}
+.two{
+    
+    top: 30%;
+    left: -20%;
+    
+    background-position: 150px 0px;
+}
+
+.three{
+    
+    bottom: 0%;
+    right: 40%;
+    
+    background-position: 385px 0px;
+}
+
+.four{
+    
+    top: 0%;
+    right: 40%;
+    
+    background-position: 270px 0px;
+}
+
+.five{
+    
+    top: 5%;
+    right: 0%;
+    
+    background-position: 0px 250px;
+}
+.six{
+    
+    top: 10%;
+    right: 75%;
+    
+    background-position: 150px 250px;
+}
+
+.seven{
+    
+    bottom:-10%;
+    right: 90%;
+    
+    background-position: 270px 250px;
+}
+.eight{
+    
+    bottom: -10%;
+    right: 60%;
+    
+    background-position: 385px 250px;
+}
+.nine{
+    
+    top: 60%;
+    left: -10%;
+    
+    background-position: 270px 375px;
+}
+.ten{
+    top: 10%;
+    left: -10%;
+    
+    background-position: 0px 375px;
+}
+
+h1{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 60px;
+    color:rgba(0,0,0, 0.8);
+}
+
+.images a:hover{
+    transform: scale(1.2);
+}
+
+img{
+    z-index: -100;
+}
+
+@media only screen and (max-width: 1024px){
+
+
+    img{
+        
+        width:80%;
+    }
+
+    form{
+        height: auto;
+        width: auto;
+        margin-right: -50px;
+ 
+    }
+
+
+}
+
+@media only screen and (max-width: 800px){
+
+    h1{
+        font-size: 50px;
+        margin-left: 50px;
+        margin-right: -100px;
+    }
+    img{
+        display: none;
+    }
+    h2{
+        display: none;
+    }
+
+    .main
+    {
+        display: block;
+    }
+    form{
+        height: auto;
+        width: 60%;
+        margin: 10px 30%;
+        
+ 
+    }
+
+
+}
+@media only screen and (max-width: 500px){
+
+
+    form{
+        height: auto;
+        width: 90%;
+        margin-left: 15%;
+        
+ 
+    }
+    .form-group{
+        padding: 0;
+    }
+
+
+}
+
+
+
+
+
+
+

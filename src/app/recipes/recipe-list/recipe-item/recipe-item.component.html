@@ -1,0 +1,11 @@
+<a routerLinkActive = "active" [routerLink] = "[index]" class="list-group-item clearfix" style = "cursor: pointer;" >
+    <div class="col-xs-9">
+        <h4 class="list-group-item-heading" >{{item.name}}</h4>
+        <p class="list-group-item-text">{{item.description}}</p>
+
+    </div>
+    <span class="col-xs-3">
+        <img src="{{item.imagePath}}" alt="{{item.name}}" class="img-responsive" style="height: 60px;width:110px">
+    </span>
+
+</a>

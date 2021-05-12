@@ -1,0 +1,81 @@
+<ng-template appPlaceholder></ng-template>
+
+<div class="row">
+    <div class="main ">
+        <div class="images">
+            <a class="one"></a>
+            <a class="two"></a>
+            <a class="three"></a>
+            <a class="four"></a>
+            <a class="five"></a>
+            <a class="six"></a>
+            <a class="seven"></a>
+            <a class="eight"></a>
+            <a class="nine"></a>
+            <a class="ten"></a>
+            
+        </div>
+    
+        <!-- <div class="alert alert-danger" *ngIf = "error">
+            <p>{{error}}</p>
+        </div> -->
+        <!-- <app-alert [
+            message]= "error" 
+            *ngIf="error" 
+            (close)="onHandleError()">
+        </app-alert> -->
+        <div class="col-xs-12 head">
+            <h1 >Welcome to CookBook!</h1>
+            <h2>Your one stop place for maintaining all your recipes</h2>
+            <img src="https://media.giphy.com/media/ll61xC3gYPh7C5SPCU/giphy.gif" >
+            <!-- <img src="https://media.giphy.com/media/l41lPX79K0l6sIvni/giphy.gif" > -->
+            <!-- <img src="https://images.pexels.com/photos/604969/pexels-photo-604969.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"> -->
+        </div>
+        
+        <div *ngIf = "isLoading" style="text-align: center;">
+            <app-loading-spinner></app-loading-spinner>
+        </div>
+
+        <form class="col-xs-12" #authForm = "ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+            <h3>{{ isLoginMode ? 'Login' : 'Create Account'}}</h3>
+            <hr>
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input 
+                    type="email" 
+                    class="form-control" 
+                    id="email"
+                    ngModel
+                    name="email"
+                    required
+                    email
+                >
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="password"
+                    ngModel
+                    name="password"
+                    required
+                    minlength="6"
+                >
+            </div>
+            <div>
+                <button class="btn btn-primary" 
+                    type="submit"
+                    [disabled] = "!authForm.valid">
+                    {{ isLoginMode ? 'Login' : 'Sign Up'}}
+                </button>
+                <hr>
+                <a  
+                    (click)="onSwitchMode()" 
+                    type="button">
+                    {{isLoginMode ? "Don't have and account? SignUp" : 'Already a member ? Login'}}
+            </a>
+            </div>
+        </form>
+    </div>
+</div>
